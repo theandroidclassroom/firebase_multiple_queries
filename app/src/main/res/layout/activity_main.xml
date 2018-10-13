@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.theandroidclassroom.firestoredemo.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:weightSum="1">
+        <EditText
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:hint="name"
+            android:background="@drawable/edittext_background"
+            android:id="@+id/name"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:layout_height="30dp" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight=".11"
+            android:hint="Age"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:maxLength="2"
+            android:gravity="center_horizontal"
+            android:id="@+id/age"
+            android:layout_height="30dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:hint="Gender"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/edittext_background"
+            android:id="@+id/gender"
+            android:layout_height="30dp" />
+
+        <Button
+            android:layout_gravity="top"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:id="@+id/submit"
+            android:layout_height="30dp"
+            android:layout_marginTop="-0dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/border_button"
+            android:text="Submit"/>
+    </LinearLayout>
+
+
+  <android.support.v7.widget.RecyclerView
+      android:layout_below="@+id/linear"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/recycler"/>
+
+
+</RelativeLayout>
